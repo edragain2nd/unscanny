@@ -1,0 +1,10 @@
+{
+  "name": "unscanny",
+  "version": "0.1.0",
+  "readme": "README.md",
+  "repository": "https://github.com/edragain2nd/unscanny.git",
+  "license": "Apache-2.0",
+  "keywords": ["scanning","tokenizing"],
+  "description": "Painless string scanning.",
+  "source": "src"
+}
