@@ -11,8 +11,8 @@ unscanny = "0.1"
 
 Basically, you'll want to use this package if it's too much pain to solve your problem with a bare iterator. Speaking more broadly, unscanny is useful in these situations:
 
-You need to parse simple flat grammars (dates, times, custom stuff, ...) and want an interface that's a bit more convenient to use than a simple char iterator.
-You're hand-writing a tokenizer.
+- You need to parse simple flat grammars (dates, times, custom stuff, ...) and want an interface that's a bit more convenient to use than a simple char iterator.
+- You're hand-writing a tokenizer.
 
 The Scanner keeps an internal cursor, allows you to peek around it, advance it beyond chars or other patterns and easily slice substrings before and after the cursor.
 
