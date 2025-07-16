@@ -1,0 +1,51 @@
+package "edragain2nd/unscanny"
+
+// Values
+
+// Types and methods
+pub struct CharPredicate {
+  pred : (Char) -> Bool
+}
+fn CharPredicate::new((Char) -> Bool) -> Self
+impl Pattern for CharPredicate
+
+pub struct Scanner {
+  str : String
+  mut cursor : Int
+}
+fn Scanner::after(Self) -> String
+fn[T : Pattern] Scanner::at(Self, T) -> Bool
+fn Scanner::before(Self) -> String
+fn Scanner::cursor(Self) -> Int
+fn Scanner::done(Self) -> Bool
+fn Scanner::eat(Self) -> Char?
+fn[T : Pattern] Scanner::eat_if(Self, T) -> Bool
+fn[T : Pattern] Scanner::eat_until(Self, T) -> String
+fn[T : Pattern] Scanner::eat_while(Self, T) -> String
+fn Scanner::eat_whitespace(Self) -> String
+fn[T : Pattern] Scanner::expect(Self, T) -> Unit raise Failure
+fn Scanner::from(Self, Int) -> String
+fn Scanner::get(Self, Int, Int) -> String
+fn Scanner::jump(Self, Int) -> Unit
+fn Scanner::locate(Self, Int) -> Int
+fn Scanner::new(String) -> Self
+fn Scanner::parts(Self) -> (String, String)
+fn Scanner::peek(Self) -> Char?
+fn Scanner::scout(Self, Int) -> Char?
+fn Scanner::snap(Self, Int) -> Int
+fn Scanner::string(Self) -> String
+fn Scanner::to(Self, Int) -> String
+fn Scanner::uneat(Self) -> Char?
+
+// Type aliases
+
+// Traits
+pub(open) trait Pattern {
+  matches(Self, String) -> Int?
+  expected(Self) -> Unit raise Failure
+}
+impl Pattern for Char
+impl Pattern for String
+impl Pattern for Array[Char]
+impl Pattern for CharPredicate
+
