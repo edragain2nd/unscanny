@@ -6,7 +6,7 @@ rewrite [Unscanny](https://github.com/typst/unscanny) in moonbit
 
 ```
 [dependencies]
-unscanny = "0.1"
+unscanny = "0.1.0"
 ```
 
 Basically, you'll want to use this package if it's too much pain to solve your problem with a bare iterator. Speaking more broadly, unscanny is useful in these situations:
